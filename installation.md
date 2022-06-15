@@ -8,6 +8,8 @@ has_toc: true
 
 # Installation
 
+  {:toc}
+
 ## Arch-based distro
 
 To install plainDE on Arch Linux you can install `plainde-meta` AUR package
