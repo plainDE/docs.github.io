@@ -2,14 +2,10 @@
 layout: default
 title: Installation
 nav_order: 3
-has_toc: true
 ---
 
 
 # Installation
-
-- TOC
-  {:toc}
 
 ## Arch-based distro
 
