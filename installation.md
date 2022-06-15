@@ -18,14 +18,14 @@ Firstly, install the following dependencies:
 
 After installing dependencies run
 
-```sh
+~~~sh
 sh -c "$(curl -fsSL plainde.org/install)"
-```
+~~~
 
 or run this as root
 
-```sh
+~~~sh
 sh -c "$(curl -fsSL plainde.org/installAsRoot)"
-```
+~~~
 
 This script will install all plainDE components (plainPanel, plainControlCenter, plainAbout)
