@@ -8,6 +8,7 @@ has_toc: true
 
 # Installation
 
+- TOC
   {:toc}
 
 ## Arch-based distro
