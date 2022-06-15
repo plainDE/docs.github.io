@@ -1,6 +1,6 @@
 remote_theme: just-the-docs/just-the-docs
 
-title: plainDE
+title: plainDE docs
 
 description: plainDE documentation
 
@@ -35,5 +35,5 @@ plugins:
 kramdown:
   syntax_highlighter_opts:
     block:
-      line_numbers: true
+      line_numbers: false
 
