@@ -7,6 +7,10 @@ nav_order: 3
 
 # Installation
 
+## GNU/Linux repository
+
+Learn more about our repository at [repo.plainde.org](https://repo.plainde.org)
+
 ## Arch-based distro
 
 To install plainDE on Arch Linux you can install `plainde-meta` AUR package or add [plainDE repository](https://repo.plainde.org).
