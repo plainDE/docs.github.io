@@ -39,4 +39,4 @@ or run this as root
 sh -c "$(curl -fsSL plainde.org/installAsRoot)"
 ~~~
 
-This script will install all plainDE components (plainPanel, plainControlCenter, plainAbout)
+This script will install all plainDE components (plainBase, plainPanel, plainControlCenter, plainAbout, plainArtwork)
