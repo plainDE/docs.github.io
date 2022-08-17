@@ -22,6 +22,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   </tr>
   
   <tr>
+    <td>appMenuTriangularTabs</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Sets if App Menu tabs should have triangular form. Turn this off only on light theme!</td>
+    <td>true</td>
+  </tr>
+  
+  <tr>
     <td>applets</td>
     <td>Array of string</td>
     <td>Array of applets (<a href="https://github.com/plainDE/plainPanel/tree/main/applets/appmenu">appmenu</a>, 
