@@ -36,12 +36,13 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/datetime">datetime</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/kblayout">kblayout</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/localipv4">localipv4</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/mpris">mpris</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/usermenu">usermenu</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/volume">volume</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/windowlist">windowlist</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/workspaces">workspaces</a>)</td>
     <td>Sets list of applets and their position</td>
-    <td>["appmenu", "windowlist", "spacer", "workspaces", "volume", "kblayout", "datetime", "splitter", "usermenu"]</td>
+    <td>["appmenu", "windowlist", "spacer", "mpris", "workspaces", "volume", "kblayout", "datetime", "splitter", "usermenu"]</td>
   </tr>
   
   <tr>
