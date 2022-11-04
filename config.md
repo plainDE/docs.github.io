@@ -28,23 +28,7 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets if App Menu tabs should have triangular form. Turn this off only on light theme!</td>
     <td>true</td>
   </tr>
-  
-  <tr>
-    <td>applets</td>
-    <td>Array of string</td>
-    <td>Array of applets (<a href="https://github.com/plainDE/plainPanel/tree/main/applets/appmenu">appmenu</a>, 
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/datetime">datetime</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/kblayout">kblayout</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/localipv4">localipv4</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/mpris">mpris</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/usermenu">usermenu</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/volume">volume</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/windowlist">windowlist</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/workspaces">workspaces</a>)</td>
-    <td>Sets list of applets and their position</td>
-    <td>["appmenu", "windowlist", "spacer", "mpris", "workspaces", "volume", "kblayout", "datetime", "splitter", "usermenu"]</td>
-  </tr>
-  
+
   <tr>
     <td>autostart</td>
     <td>Array of string</td>
@@ -82,14 +66,6 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Bool</td>
     <td>true/false</td>
     <td>Sets if panel slide animation is required</td>
-    <td>true</td>
-  </tr>
-  
-  <tr>
-    <td>expandPanel</td>
-    <td>Bool</td>
-    <td>true/false</td>
-    <td>Sets if panel should be full width (using all width of screen)</td>
     <td>true</td>
   </tr>
   
@@ -174,30 +150,6 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   </tr>
   
   <tr>
-    <td>panelHeight</td>
-    <td>Int</td>
-    <td>Number that represents height of panel in pixels</td>
-    <td>Sets height of panel in pixels</td>
-    <td>28</td>
-  </tr>
-  
-  <tr>
-    <td>panelLocation</td>
-    <td>String</td>
-    <td>"top" <i>or</i> "bottom"</td>
-    <td>Sets location of panel to top or bottom</td>
-    <td>"top"</td>
-  </tr>
-  
-  <tr>
-    <td>panelOpacity</td>
-    <td>Float</td>
-    <td>A number in range from 0 through 1</td>
-    <td>Sets opacity for panel and applets</td>
-    <td>0.85</td>
-  </tr>
-  
-  <tr>
     <td>showDate</td>
     <td>Bool</td>
     <td>true/false</td>
@@ -228,17 +180,71 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets is country flag should be shown instead of kayboard layout ISO code</td>
     <td>true</td>
   </tr>
+</table>
+
+### Panel property description
+These properties should be inside of 'panel1' or 'panel2' property in config.json.
+<table>
+  <tr>
+    <td>applets</td>
+    <td>Array of string</td>
+    <td>Array of applets (<a href="https://github.com/plainDE/plainPanel/tree/main/applets/appmenu">appmenu</a>, 
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/datetime">datetime</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/kblayout">kblayout</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/localipv4">localipv4</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/mpris">mpris</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/usermenu">usermenu</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/volume">volume</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/windowlist">windowlist</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/workspaces">workspaces</a>,
+                          <a>spacer</a>,
+                          <a>splitter</a>,
+                          <a>launcher:app.desktop</a>)</td>
+    <td>Sets list of applets and their position</td>
+    <td>Panel 1: ["appmenu", "spacer", "mpris", "volume", "kblayout", "datetime", "splitter", "usermenu"]<br><br>
+        Panel 2: ["windowlist", "spacer", "localipv4", "workspaces"]</td>
+  </tr>
+  
+  <tr>
+    <td>expand</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Sets if panel should be full width (using all width of screen)</td>
+    <td>true</td>
+  </tr>
+  
+  <tr>
+    <td>height</td>
+    <td>Int</td>
+    <td>Number that represents height of panel in pixels</td>
+    <td>Sets height of panel in pixels</td>
+    <td>28</td>
+  </tr>
+  
+  <tr>
+    <td>location</td>
+    <td>String</td>
+    <td>"top" <i>or</i> "bottom"</td>
+    <td>Sets location of panel to top or bottom</td>
+    <td>Panel 1: "top"<br><br>Panel 2: "bottom"</td>
+  </tr>
+  
+  <tr>
+    <td>opacity</td>
+    <td>Float</td>
+    <td>A number in range from 0.0 through 1.0</td>
+    <td>Sets opacity for panel and applets (you must have compositor for this to work!)</td>
+    <td>0.85</td>
+  </tr>
   
   <tr>
     <td>xOffset</td>
     <td>Int</td>
     <td>Number in range from 0 through (screen width - panel width)</td>
-    <td>Sets how many pixels the panel should be shifted. Use with `expandPanel` turned off.</td>
+    <td>Sets how many pixels the panel should be shifted. `expand` disables this option.</td>
     <td>0</td>
   </tr>
-  
 </table>
-
 
 ## Conclusion
 plainControlCenter lets you edit all of this properties, but now you can edit config.json manually if you want.
