@@ -9,4 +9,6 @@ nav_order: 2
 
 plainDE is a GNU/Linux desktop environment that strives for lightness and speed.
 
-Now the project is at an early stage of development, and can only be used by advanced users.
+Currently the project is at an early stage of development, and can be used only by advanced users.
+
+<img src="https://plainde.org/scr/scr-latest.png" width="640" height="480">
