@@ -3,7 +3,7 @@
 This page is dedicated to tools located at ```/usr/share/plainDE/tools/```. Currently there are 2 tools written in Python.
 
 ## genconfig.py
-This tool is responsible for creating <a href="config.md"><code>config.json</code></a>. This simple tool is started when plainPanel can't find file located at ```~/.config/plainDE/config.json```. It writes options from dictionary to the json file. 
+This tool is responsible for creating <a href="config"><code>config.json</code></a>. This simple tool is started when plainPanel can't find file located at ```~/.config/plainDE/config.json```. It writes options from dictionary to the json file. 
 
 ## update-config.py
 This tool updates config when needed. It is ran every time plainPanel starts. First of all, it checks ```configVersion``` entry. If ```configVersion``` does not match version written at ```/usr/share/plainDE/release_data```, it renames your ```config.json``` to ```config.json.sav``` and runs ```genconfig.py``` to create a new config. Then it checks differences between configs. Changes are made when:
