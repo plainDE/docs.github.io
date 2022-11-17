@@ -7,5 +7,5 @@ nav_order: 1
 
 # Welcome to plainDE documentation!
 
-For new users recommended to start from [introduction to project](/introduction).
+It is recommended for new users to start from [introduction to project](/introduction).
 
