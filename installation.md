@@ -17,13 +17,13 @@ To install plainDE on Arch Linux you can install `plainde-meta` AUR package or a
 
 ## From source
 
-Firstly, install the following dependencies:
+First of all, install the following dependencies:
 
 | Distro | List of dependencies |
 |---|---|
-| Arch Linux | `git qt6-base xorg noto-fonts-emoji polkit ttf-opensans make alsa-utils kwindowsystem python3 xcompmgr`|
-| Debian 11+ / Ubuntu 22.04+ | `git g++ qt6-base-dev xorg fonts-noto-color-emoji make alsa-utils libkf5windowsystem-dev python3 xcompmgr libxkbcommon-x11-dev` |
-| Fedora 36 | `git qt6-qtbase-devel xorg-x11-server-Xorg google-noto-emoji-fonts make alsa-utils kf5-kwindowsystem-devel xcompmgr` |
+| Arch Linux | `git qt6-base xorg noto-fonts-emoji polkit ttf-opensans make alsa-utils kwindowsystem python3 picom`|
+| Debian 11+ / Ubuntu 22.04+ | `git g++ qt6-base-dev xorg fonts-noto-color-emoji make alsa-utils libkf5windowsystem-dev python3 picom libxkbcommon-x11-dev` |
+| Fedora 36 | `git qt6-qtbase-devel xorg-x11-server-Xorg google-noto-emoji-fonts make alsa-utils kf5-kwindowsystem-devel picom` |
 
 **Caution**. Fedora is not tested yet.
 
