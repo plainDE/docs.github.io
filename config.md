@@ -216,11 +216,19 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
   <tr>
     <td>height</td>
     <td>Int</td>
-    <td>Number that represents height of panel in pixels</td>
+    <td>Number in range from 0 through 256</td>
     <td>Sets height of panel in pixels</td>
     <td>28</td>
   </tr>
   
+  <tr>
+    <td>launcherIconSize</td>
+    <td>Int</td>
+    <td>Number in range from 0 through 256</td>
+    <td>Sets size of launchers icons (height and width) in pixels</td>
+    <td>22</td>
+  </tr>
+    
   <tr>
     <td>location</td>
     <td>String</td>
