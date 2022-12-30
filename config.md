@@ -192,6 +192,7 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/datetime">datetime</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/kblayout">kblayout</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/localipv4">localipv4</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/battery">battery</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/mpris">mpris</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/usermenu">usermenu</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/volume">volume</a>,
@@ -201,7 +202,7 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
                           <a>splitter</a>,
                           <a>launcher:app.desktop</a>)</td>
     <td>Sets list of applets and their position</td>
-    <td>Panel 1: ["appmenu", "spacer", "mpris", "volume", "kblayout", "datetime", "splitter", "usermenu"]<br><br>
+    <td>Panel 1: ["appmenu", "spacer", "battery", "mpris", "volume", "kblayout", "datetime", "splitter", "usermenu"]<br><br>
         Panel 2: ["windowlist", "spacer", "localipv4", "workspaces"]</td>
   </tr>
   
