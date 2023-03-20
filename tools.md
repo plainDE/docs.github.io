@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Installation
+title: Tools
 nav_order: 5
 ---
 
