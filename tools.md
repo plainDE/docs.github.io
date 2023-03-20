@@ -1,3 +1,10 @@
+---
+layout: default
+title: Installation
+nav_order: 5
+---
+
+
 # Tools
 ## Introduction
 This page is dedicated to tools located at ```/usr/share/plainDE/tools/```. Currently there are 2 tools written in Python.
