@@ -1,3 +1,10 @@
+---
+layout: default
+title: D-Bus Integration
+nav_order: 6
+---
+
+
 # D-Bus Integration
 
 ## Introduction
