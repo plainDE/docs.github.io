@@ -22,17 +22,17 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   </tr>
   
   <tr>
-    <td>appMenuTriangularTabs</td>
+    <td>useTriangularTabs</td>
     <td>Bool</td>
     <td>true/false</td>
-    <td>Sets if App Menu tabs should have triangular form. Turn this off only on light theme!</td>
+    <td>Sets if App Menu tabs should have triangular form.</td>
     <td>true</td>
   </tr>
 
   <tr>
     <td>autostart</td>
     <td>Array of string</td>
-    <td>Array of desktop files (/usr/share/applications/*.desktop)</td>
+    <td>Array of desktop files (/usr/share/applications/*.desktop; ~/.local/share/applications/*.desktop)</td>
     <td>Sets list of apps that should start with plainPanel automatically</td>
     <td><i>Empty</i></td>
   </tr>
@@ -54,9 +54,17 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   </tr>
   
   <tr>
+    <td>countPanels</td>
+    <td>Int</td>
+    <td>1 ~ 4</td>
+    <td>Says panel and control center how many panels should be processed. Should not be changed by user (deleted panels are null'ed, so there's no need to change this property).</td>
+    <td>4</td>
+  </tr>
+  
+  <tr>
     <td>dateFormat</td>
     <td>String</td>
-    <td>d - 1-31 <br> dd - 01-31 <br> ddd - Mon-Sun <br> M - 1-12 <br> MM - 01-12 <br> MMM - Jan-Dec <br> yy - 00-99 <br> yyyy - 1970-9999</td>
+    <td>d (1~31) <br> dd (01~31) <br> ddd (Mon~Sun) <br> M (1~12) <br> MM (01~12) <br> MMM (Jan~Dec) <br> yy (00~99) <br> yyyy (1970~9999)</td>
     <td>Sets format of the date in datetime applet (if date is not hidden)</td>
     <td>"MMM d"</td>
   </tr>
@@ -72,7 +80,7 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   <tr>
     <td>favApps</td>
     <td>Array of string</td>
-    <td>Array of desktop files (/usr/share/applications/*.desktop)</td>
+    <td>Array of desktop files (/usr/share/applications/*.desktop; ~/.local/share/applications/*.desktop)</td>
     <td>Sets list of apps showed in 'Favorites' tab of App Menu applet</td>
     <td><i>Empty array</i></td>
   </tr>
@@ -80,7 +88,7 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   <tr>
     <td>firstDayOfWeek</td>
     <td>Int</td>
-    <td>Number in range from 1 through 7</td>
+    <td>1 ~ 7</td>
     <td>Sets first day of week in Calendar applet. <a href="https://code.woboq.org/qt5/qtbase/src/corelib/global/qnamespace.h.html#Qt::DayOfWeek">See Qt::DayOfWeek.</a></td>
     <td>1</td>
   </tr>
@@ -118,6 +126,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   </tr>
   
   <tr>
+    <td>ipColor</td>
+    <td>String</td>
+    <td>HEX color starting with #</td>
+    <td>Sets color that should be used for showing Local IPv4 address. It is separate from QSS because we use QGraphicsView for showing IP (lets us rotate applet - we use it in vertical panels). It does not support QSS text customization.</td>
+    <td>#ffffff</td>
+  </tr>
+  
+  <tr>
     <td>kbLayoutToggle</td>
     <td>String</td>
     <td>Method that will be used for switching keyboard layouts</td>
@@ -144,8 +160,8 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   <tr>
     <td>menuText</td>
     <td>String</td>
-    <td>Text shown next to the menu icon</td>
-    <td>Sets custom text for App Menu applet. Default value is 'Apps'</td>
+    <td>Any string or empty string</td>
+    <td>Sets custom text for App Menu applet.</td>
     <td>"Apps"</td>
   </tr>
   
@@ -162,13 +178,13 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>String</td>
     <td>Preferred theme name (QSS)</td>
     <td>Sets preferred QSS theme name (see available themes at <a href="https://github.com/plainDE/plainBase/tree/main/usr/share/plainDE/styles">/usr/share/plainDE/styles/</a>)</td>
-    <td>"gradient-light.qss"</td>
+    <td>"gradient-dark.qss"</td>
   </tr>
   
   <tr>
     <td>timeFormat</td>
     <td>String</td>
-    <td>h - 0-23, 1-12 <br> hh - 00-23, 01-12 <br> m - 0-59 <br> mm - 00-59 <br> s - 0-59 <br> ss - 00-59 <br> AP - AM/PM <br> t - timezone</td>
+    <td>h (0~23, 1~12) <br> hh (00~23, 01~12) <br> m (0~59) <br> mm (00~59) <br> s (0~59) <br> ss (00~59) <br> AP (AM/PM) <br> t (timezone)</td>
     <td>Sets time format in datetime applet</td>
     <td>"h:mm AP"</td>
   </tr>
@@ -193,16 +209,19 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/kblayout">kblayout</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/localipv4">localipv4</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/battery">battery</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/snitray">snitray</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/mpris">mpris</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/usermenu">usermenu</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/volume">volume</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/windowlist">windowlist</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/workspaces">workspaces</a>,
-                          <a>spacer</a>,
-                          <a>splitter</a>,
-                          <a>launcher:app.desktop</a>)</td>
+                          <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L708">spacer</a>,
+                          <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L717">splitter</a>,
+                          <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L913">launcher:app.desktop</a>)<br>
+      // follow these links to view source code of every applet
+    </td>
     <td>Sets list of applets and their position</td>
-    <td>Panel 1: ["appmenu", "spacer", "battery", "mpris", "volume", "kblayout", "datetime", "splitter", "usermenu"]<br><br>
+    <td>Panel 1: ["appmenu", "spacer", "sni", "battery", "mpris", "volume", "kblayout", "datetime", "splitter", "usermenu"]<br><br>
         Panel 2: ["windowlist", "spacer", "localipv4", "workspaces"]</td>
   </tr>
   
@@ -215,17 +234,17 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
   </tr>
   
   <tr>
-    <td>height</td>
+    <td>thickness</td>
     <td>Int</td>
-    <td>Number in range from 0 through 256</td>
-    <td>Sets height of panel in pixels</td>
+    <td>0 ~ 256</td>
+    <td>Sets thickness of panel (height for horizontal one, width for vertical one) in pixels</td>
     <td>28</td>
   </tr>
   
   <tr>
     <td>launcherIconSize</td>
     <td>Int</td>
-    <td>Number in range from 0 through 256</td>
+    <td>0 ~ 256</td>
     <td>Sets size of launchers icons (height and width) in pixels</td>
     <td>22</td>
   </tr>
@@ -233,7 +252,7 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
   <tr>
     <td>location</td>
     <td>String</td>
-    <td>"top" <i>or</i> "bottom"</td>
+    <td>"top", "bottom", "left" <i>or</i> "right"</td>
     <td>Sets location of panel to top or bottom</td>
     <td>Panel 1: "top"<br><br>Panel 2: "bottom"</td>
   </tr>
@@ -241,15 +260,15 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
   <tr>
     <td>opacity</td>
     <td>Float</td>
-    <td>A number in range from 0.0 through 1.0</td>
+    <td>0.0 ~ 1.0</td>
     <td>Sets opacity for panel and applets (you must have compositor for this to work!)</td>
     <td>0.85</td>
   </tr>
   
   <tr>
-    <td>xOffset</td>
+    <td>shift</td>
     <td>Int</td>
-    <td>Number in range from 0 through (screen width - panel width)</td>
+    <td>0 ~ (screen width - panel width)</td>
     <td>Sets how many pixels the panel should be shifted. `expand` disables this option.</td>
     <td>0</td>
   </tr>
