@@ -1,3 +1,10 @@
+---
+layout: default
+title: config.json
+nav_order: 4
+---
+
+
 # config.json
 
 ## Introduction to config.json
