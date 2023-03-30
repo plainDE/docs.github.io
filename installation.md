@@ -7,14 +7,6 @@ nav_order: 3
 
 # Installation
 
-## GNU/Linux repository
-
-Learn more about our repository at [repo.plainde.org](https://repo.plainde.org)
-
-## Arch-based distro
-
-To install plainDE on Arch Linux you can install `plainde-meta` AUR package or add [plainDE repository](https://repo.plainde.org).
-
 ## From source
 
 First of all, install the following dependencies:
@@ -30,13 +22,13 @@ First of all, install the following dependencies:
 After installing dependencies run
 
 ~~~sh
-sh -c "$(curl -fsSL plainde.org/install)"
+sh -c "$(curl -fsSL plainde.github.io/install)"
 ~~~
 
 or run this as root
 
 ~~~sh
-sh -c "$(curl -fsSL plainde.org/installAsRoot)"
+sh -c "$(curl -fsSL plainde.github.io/installAsRoot)"
 ~~~
 
 This script will install all plainDE components (plainBase, plainPanel, plainControlCenter, plainAbout, plainArtwork)
