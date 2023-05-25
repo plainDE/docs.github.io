@@ -240,7 +240,7 @@ These properties should be inside of 'panel1' or 'panel2' property in config.jso
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/workspaces">workspaces</a>,
                           <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L708">spacer</a>,
                           <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L717">splitter</a>,
-                          <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L913">launcher:app.desktop</a>)<br>
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/launcher">launcher:app.desktop / launcher:/path/to/script:/path/to/icon</a>)<br>
       // follow these links to view source code of every applet
     </td>
     <td>Sets list of applets and their position</td>
