@@ -29,6 +29,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
   </tr>
   
   <tr>
+    <td>avatar</td>
+    <td>String</td>
+    <td>Path to an image</td>
+    <td>Sets a picture next to your username. If an option is empty, we use 'computer' icon.</td>
+    <td><i>Empty</i></td>
+  </tr>
+  
+  <tr>
     <td>useTriangularTabs</td>
     <td>Bool</td>
     <td>true/false</td>
@@ -178,6 +186,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>true/false</td>
     <td>Sets if date should be shown next to time</td>
     <td>true</td>
+  </tr>
+  
+  <tr>
+    <td>winListIconSize</td>
+    <td>Int</td>
+    <td>0 ~ 256</td>
+    <td>Sets size of icons in Window List applet</td>
+    <td>22</td>
   </tr>
   
   <tr>
