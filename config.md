@@ -91,6 +91,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets if panel slide animation is required</td>
     <td>true</td>
   </tr>
+
+  <tr>
+    <td>enableOveramplification</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Lets you increase volume over 100% (max is 150%). <b>Note. Works only with PulseAudio adjustVolumeMethod</b>.</td>
+    <td>false</td>
+  </tr>
   
   <tr>
     <td>favApps</td>
@@ -171,6 +179,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets custom icon for App Menu applet</td>
     <td>"/usr/share/plainDE/menuIcon.png"</td>
   </tr>
+
+  <tr>
+    <td>menuIconSize</td>
+    <td>Int</td>
+    <td>0 ~ 256</td>
+    <td>Size of App Menu icon</td>
+    <td>16</td>
+  </tr>
   
   <tr>
     <td>menuText</td>
@@ -219,6 +235,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets is country flag should be shown instead of kayboard layout ISO code</td>
     <td>true</td>
   </tr>
+
+  <tr>
+    <td>volumeAdjustMethod</td>
+    <td>String</td>
+    <td>"ALSA" / "PulseAudio"</td>
+    <td>Sets which method panel should use for adjusting volume</td>
+    <td>"ALSA"</td>
+  </tr>
 </table>
 
 ### Panel property description
@@ -240,7 +264,8 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/workspaces">workspaces</a>,
                           <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L708">spacer</a>,
                           <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L717">splitter</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/launcher">launcher:app.desktop / launcher:/path/to/script:/path/to/icon</a>)<br>
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/launcher">launcher:app.desktop / launcher:/path/to/script:/path/to/icon</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/clioutput">clioutput:appletname</a>)<br>
       // follow these links to view source code of every applet
     </td>
     <td>Sets list of applets and their position</td>
