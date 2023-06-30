@@ -88,7 +88,7 @@ Check out<br>
 We try to get icon with 3 ways. We use them one by one hoping that something will work.
 1) Ideal situation is when D-Bus service provide IconName property in <a href="https://www.freedesktop.org/wiki/Specifications/StatusNotifierItem/StatusNotifierItem/">org.kde.StatusNotifierItem</a> interface. We just grab icon from theme.<br>
 2) More often app icon is not included in icon packs, so developers have to provide us IconPixmap property which is a byte array. Then we convert it to QImage and finally to QIcon.<br>
-3) There are even worse cases, though. Sometimes developers don't provide us neither with IconName, nor with IconPixmap (i.e., JetBrains Toolbox). Then we have last chance to get the icon. We can get Window ID of the app that wants to place an icon. After that we can get icon by Window ID. Please note that this way will work only if application opens window after starting.
+3) There are even worse cases, though. Sometimes developers don't provide us neither with IconName, nor with IconPixmap <s>(i.e., JetBrains Toolbox)</s>. Then we have last chance to get the icon. We can get Window ID of the app that wants to place an icon. After that we can get icon by Window ID. Please note that this way will work only if application opens window after starting.
 
 
 # Conclusion
