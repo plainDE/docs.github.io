@@ -222,7 +222,7 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
 </table>
 
 ### Panel property description
-These properties should be inside of 'panel1' or 'panel2' property in config.json.
+These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` property in config.json.
 <table>
   <tr>
     <td>applets</td>
