@@ -1,3 +1,9 @@
+---
+layout: default
+title: CLI Output Applet Configuration
+nav_order: 7
+---
+
 # CLI Output Applet Configuration
 Since plainDE 0.6 release there is CLI Output applet. It lets you show output of 
 a command or data depending on output of a command on the panel.
@@ -15,7 +21,6 @@ and have JSON format.
 		<td>Acceptable value</td>
 		<td>Description</td>
 	</tr>
-
 	<tr>
 		<td>type</td>
 		<td>String</td>
@@ -24,7 +29,6 @@ and have JSON format.
 		    output of command. <code>condition</code> - compare command
 		    output or exit code with preset conditions and show required data.</td>
 	</tr>
-
 	<tr>
 		<td>command</td>
 		<td>String</td>
@@ -32,14 +36,12 @@ and have JSON format.
 		    if needed.</td>
 		<td>Sets shell command that will be executed to get data.</td>
 	</tr>
-
 	<tr>
 		<td>interval</td>
 		<td>Int</td>
 		<td>milliseconds value</td>
 		<td>Delay between each update.</td>
 	</tr>
-
 	<tr>
 		<td>conditionType</td>
 		<td>String</td>
@@ -47,7 +49,6 @@ and have JSON format.
 		<td>Criteria that will be used to find matching output data. 
 		    <b>Note</b> Works only if <code>condition</code> mode is used.</td>
 	</tr>
-
 	<tr>
 		<td>conditions</td>
 		<td>JsonObject</td>
@@ -55,12 +56,30 @@ and have JSON format.
 		<td>Sets matching pairs that will be used to find suitable output data.
 		    <b>Note</b> Works only if <code>condition</code> mode is used.</td>
 	</tr>
-	
 	<tr>
 		<td>waitData</td>
 		<td>String</td>
-		<td>[IconName];[Text]</td>
+		<td>IconNameOrPath;Text</td>
 		<td>Data that will be set to QLabel while command is running.
 		    <b>Note</b> Works only if <code>condition</code> mode is used.</td>
 	</tr>
 </table>
+
+### Config sample
+`~/.config/plainDE/clioutput-applets/checkupdates.json`
+```
+{
+	"type": "condition",
+	"command": "checkupdates",
+	"interval": 3600000,
+	"conditionType": "exitcode",
+	"conditions": {
+		"0": "help-info;Updates available",
+		"2": "mail-mark-notjunk;No updates"
+	},
+	"waitData": "mail-send-receive;Fetching info"
+}
+```
+P.S. This a real config that checks updates every 1 hour. It works on Arch Linux with installed `pacman-contrib` package.<br><br>
+Add `clioutput:[name]` in `applets` property of your panel in order to enable this applet.
+
