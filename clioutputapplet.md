@@ -81,5 +81,13 @@ and have JSON format.
 }
 ```
 P.S. This a real config that checks updates every 1 hour. It works on Arch Linux with installed `pacman-contrib` package.<br><br>
-Add `clioutput:[name]` in `applets` property of your panel in order to enable this applet.
+Add `clioutput:[appletname]` in `applets` property of your panel in order to enable this applet. [appletname] is name of a file from ~/.config/plainDE/clioutput-applets/ without `.json` in the end.
+
+Example:
+```
+'panel1': {
+	'applets': [..., 'clioutput:checkupdates'],
+	...
+}
+```
 
