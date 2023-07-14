@@ -243,6 +243,22 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets which method panel should use for adjusting volume</td>
     <td>"ALSA"</td>
   </tr>
+
+  <tr>
+    <td>winListShowTitles</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Sets if window titles should be shown.</td>
+    <td>true</td>
+  </tr>
+
+  <tr>
+    <td>showWeekNumbers</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Sets if week numbers should be shown in QCalendarWidget</td>
+    <td>true</td>
+  </tr>
 </table>
 
 ### Panel property description
