@@ -8,6 +8,8 @@ nav_order: 7
 Since plainDE 0.6 release there is CLI Output applet. It lets you show output of 
 a command or data depending on output of a command on the panel.
 
+<b>Note.</b> plainControlCenter 0.6.1 and upper fully supports CLI Output Applet.
+
 # How to set it up?
 CLI Output applet can be configured both using plainControlCenter and manually.
 All configs of CLI Output applets are stored in `~/.config/plainDE/clioutput-applets/`
@@ -24,10 +26,11 @@ and have JSON format.
 	<tr>
 		<td>type</td>
 		<td>String</td>
-		<td>"stdout" / "condition"</td>
+		<td>"stdout" / "condition" / "data"</td>
 		<td>Sets type of CLI Output applet. <code>stdout</code> - just show
 		    output of command. <code>condition</code> - compare command
-		    output or exit code with preset conditions and show required data.</td>
+		    output or exit code with preset conditions and show required data.
+		    <code>data</code> - use stdout as Output Data (IconNameOrPath;Text)</td>
 	</tr>
 	<tr>
 		<td>command</td>
@@ -57,6 +60,12 @@ and have JSON format.
 		    <b>Note</b> Works only if <code>condition</code> mode is used.</td>
 	</tr>
 	<tr>
+		<td>elseCondition</td>
+		<td>String</td>
+		<td>Output Data</td>
+		<td>Sets output data that will be shown if no suitable option was found in previous option.</td>
+	</tr>
+	<tr>
 		<td>waitData</td>
 		<td>String</td>
 		<td>IconNameOrPath;Text</td>
@@ -77,6 +86,7 @@ and have JSON format.
 		"0": "help-info;Updates available",
 		"2": "mail-mark-notjunk;No updates"
 	},
+	"elseCondition": "gtk-cancel;Failed",
 	"waitData": "mail-send-receive;Fetching info"
 }
 ```
