@@ -259,6 +259,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets if week numbers should be shown in QCalendarWidget</td>
     <td>true</td>
   </tr>
+
+  <tr>
+    <td>showDesktopNames</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Sets if workspace names should be shown instead of numbers</td>
+    <td>false</td>
+  </tr>
 </table>
 
 ### Panel property description
