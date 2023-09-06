@@ -8,7 +8,6 @@ nav_order: 2
 # Introduction to plainDE
 
 plainDE is a GNU/Linux desktop environment that strives for lightness and speed.
+Read following information in order to find out how to install and configure plainDE.
 
-Currently the project is at an early stage of development, and can be used only by advanced users.
-
-<img src="https://plainde.github.io/scr/scr-latest.png" width="640" height="480">
+<img src="https://plainde.github.io/scr/scr-newest.png" width="853" height="480">
