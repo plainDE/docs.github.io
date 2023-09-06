@@ -14,7 +14,7 @@ D-Bus is an IPC that lets you interact with programs and transfer data between t
 plainPanel runs 2 D-Bus services: ```org.plainDE.plainPanel``` and ```org.kde.StatusNotifierWatcher```. First one is for interacting with panel directly, second one is for SNI tray applet.
 
 ## org.plainDE.plainPanel
-This service has 1 interface (```org.plainDE.actions```) on path ```/Actions``` that currently (plainDE 0.5.1) has 1 method: ```reconfigurePanel```. It helps panel understand that it is required to read config (~/.config/plainDE/config.json) again. We use this method in plainControlCenter to apply settings immediately. However, it can be used by user if they need to reload config now.
+This service has 1 interface (```org.plainDE.actions```) on path ```/Actions``` that currently (plainDE 0.6.3) has 1 method: ```reconfigurePanel```. It helps panel understand that it is required to read config (~/.config/plainDE/config.json) again. We use this method in plainControlCenter to apply settings immediately. However, it can be used by user if they need to reload config now.
 
 In future it is planned to extend capabilities of this service. It will have methods to interact with applets (i.e., toggleAppMenu, toggleCalendar, toggleMPRIS etc). This will provide users with even wider ways to customize desktop and make it more convenient.
 
