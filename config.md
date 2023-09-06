@@ -308,7 +308,7 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
   <tr>
     <td>thickness</td>
     <td>Int</td>
-    <td>0 ~ 256</td>
+    <td>>= 0</td>
     <td>Sets thickness of panel (height for horizontal one, width for vertical one) in pixels</td>
     <td>28</td>
   </tr>
@@ -316,7 +316,7 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
   <tr>
     <td>launcherIconSize</td>
     <td>Int</td>
-    <td>0 ~ 256</td>
+    <td>>= 0</td>
     <td>Sets size of launchers icons (height and width) in pixels</td>
     <td>22</td>
   </tr>
@@ -340,9 +340,25 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
   <tr>
     <td>shift</td>
     <td>Int</td>
-    <td>0 ~ (screen width - panel width)</td>
+    <td>>= 0</td>
     <td>Sets how many pixels the panel should be shifted. `expand` disables this option.</td>
     <td>0</td>
+  </tr>
+
+  <tr>
+    <td>margin</td>
+    <td>Int</td>
+    <td>>= 0</td>
+    <td>Sets how many pixels should be left on left and right sides (horizontal panel) or on top and bottom (vertical panel)</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <td>screen</td>
+    <td>String</td>
+    <td>Name of one of the screens</td>
+    <td>Sets which monitor will be used for a panel</td>
+    <td><i>Empty</i></td>
   </tr>
 </table>
 
