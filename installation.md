@@ -33,7 +33,6 @@ This script will install all plainDE components (plainBase, plainPanel, plainCon
 
 3. Add plainPanel to window manager's autostart
 Guide for Openbox:
-  1. Create file ~/.config/openbox/autostart
-  2. Append to the end `plainPanel &`
+Openbox: Create file ~/.config/openbox/autostart and append `plainPanel &`
 
 Note. Mint-Y or Mint-L is a recommended icon pack (We use a few Mint-Y only icons).
