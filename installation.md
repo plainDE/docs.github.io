@@ -32,7 +32,6 @@ sh -c "$(curl -fsSL plainde.github.io/installAsRoot)"
 This script will install all plainDE components (plainBase, plainPanel, plainControlCenter, plainAbout, plainArtwork)
 
 3. Add plainPanel to window manager's autostart
-Guide for Openbox:
 Openbox: Create file ~/.config/openbox/autostart and append `plainPanel &`
 
 Note. Mint-Y or Mint-L is a recommended icon pack (We use a few Mint-Y only icons).
