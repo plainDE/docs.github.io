@@ -51,15 +51,7 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets list of apps that should start with plainPanel automatically</td>
     <td><i>Empty</i></td>
   </tr>
-  
-  <tr>
-    <td>background</td>
-    <td>String</td>
-    <td>Path to the background image</td>
-    <td>Currently unused property</td>
-    <td><i>Empty</i></td>
-  </tr>
-  
+
   <tr>
     <td>configVersion</td>
     <td>String</td>
@@ -98,6 +90,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>true/false</td>
     <td>Lets you increase volume over 100% (max is 150%). <b>Note. Works only with PulseAudio adjustVolumeMethod</b>.</td>
     <td>false</td>
+  </tr>
+  
+  <tr>
+    <td>defaultVolume</td>
+    <td>Int</td>
+    <td>0 ~ 150</td>
+    <td>Sets initial volume set after plainPanel startup.</td>
+    <td>40</td>
   </tr>
   
   <tr>
