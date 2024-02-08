@@ -267,6 +267,14 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets if workspace names should be shown instead of numbers</td>
     <td>false</td>
   </tr>
+
+  <tr>
+    <td>secondsUntilPowerOff</td>
+    <td>Int</td>
+    <td>-1 ~ INT_MAX</td>
+    <td>Sets timeout for shutdown, reboot and log out procedures. Value of -1 disables it (only manual confirmation)</td>
+    <td>30</td>
+  </tr>
 </table>
 
 ### Panel property description
@@ -295,6 +303,14 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
     <td>Sets list of applets and their position</td>
     <td>Panel 1: ["appmenu", "spacer", "sni", "battery", "mpris", "volume", "kblayout", "datetime", "splitter", "usermenu"]<br><br>
         Panel 2: ["windowlist", "spacer", "localipv4", "workspaces"]</td>
+  </tr>
+
+  <tr>
+    <td>backgroundImage</td>
+    <td>String</td>
+    <td>Path to background image</td>
+    <td>Sets background image of panel</td>
+    <td><i>Empty</i></td>
   </tr>
   
   <tr>
