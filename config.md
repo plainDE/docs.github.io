@@ -171,6 +171,22 @@ config.json file is located at ~/.config/plainDE/config.json. This file creates 
     <td>Sets keyboard layouts list for setxkbmap. See all keyboard layouts in <a href="https://github.com/plainDE/plainBase/blob/main/usr/share/plainDE/layouts.json">/usr/share/plainDE/layouts.json</a></td>
     <td>"us"</td>
   </tr>
+
+  <tr>
+    <td>logInSound</td>
+    <td>String</td>
+    <td>Path to an audio file</td>
+    <td>Sets path to an audio file that plays after logging in</td>
+    <td>""</td>
+  </tr>
+
+  <tr>
+    <td>logOutSound</td>
+    <td>String</td>
+    <td>Path to an audio file</td>
+    <td>Sets path to an audio file that plays before logging out</td>
+    <td>""</td>
+  </tr>
   
   <tr>
     <td>menuIcon</td>
@@ -294,10 +310,10 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/volume">volume</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/windowlist">windowlist</a>,
                           <a href="https://github.com/plainDE/plainPanel/tree/main/applets/workspaces">workspaces</a>,
-                          <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L708">spacer</a>,
-                          <a href="https://github.com/plainDE/plainPanel/blob/main/panel.cpp#L717">splitter</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/launcher">launcher:app.desktop / launcher:/path/to/script:/path/to/icon</a>,
-                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/clioutput">clioutput:appletname</a>)<br>
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/spacer">spacer</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/launcher">launcher:app.desktop / launcher:/path/to/script:/path/to/icon:</a>,
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/clioutput">clioutput:appletname</a>
+                          <a href="https://github.com/plainDE/plainPanel/tree/main/applets/splitter">splitter</a>)<br>
       // follow these links to view source code of every applet
     </td>
     <td>Sets list of applets and their position</td>
@@ -320,6 +336,14 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
     <td>Sets if panel should be full width (using all width of screen)</td>
     <td>true</td>
   </tr>
+
+  <tr>
+    <td>setOnCenter</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Sets if panel should be centered relatively screen. Works only if `expand` is turned off.</td>
+    <td>false</td>
+  </tr>
   
   <tr>
     <td>thickness</td>
@@ -327,6 +351,22 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
     <td>>= 0</td>
     <td>Sets thickness of panel (height for horizontal one, width for vertical one) in pixels</td>
     <td>28</td>
+  </tr>
+
+  <tr>
+    <td>enableAutoHide</td>
+    <td>Bool</td>
+    <td>true/false</td>
+    <td>Sets if panel should automatically hide when mouse not in its area</td>
+    <td>false</td>
+  </tr>
+
+  <tr>
+    <td>autoHideInterval</td>
+    <td>Int</td>
+    <td>100 ~ 32000</td>
+    <td>Sets interval in ms for Auto-Hide feature.</td>
+    <td>100</td>
   </tr>
   
   <tr>
@@ -357,7 +397,15 @@ These properties should be inside of `panel1`, `panel2`, `panel3` or `panel4` pr
     <td>shift</td>
     <td>Int</td>
     <td>>= 0</td>
-    <td>Sets how many pixels the panel should be shifted. `expand` disables this option.</td>
+    <td>Sets how many pixels the panel should be shifted.</td>
+    <td>0</td>
+  </tr>
+
+  <tr>
+    <td>spacing</td>
+    <td>Int</td>
+    <td>>= 0</td>
+    <td>Sets how many pixels should there be between applets.</td>
     <td>0</td>
   </tr>
 
